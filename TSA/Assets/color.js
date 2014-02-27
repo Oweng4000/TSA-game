@@ -8,6 +8,7 @@ var speed : int;
 var jumpSpeed : int;
 var jumping : boolean;
 var y : float;
+var lockPos : float;
 //var frameRate : double; 
 
 
@@ -22,6 +23,7 @@ health = 100;
 speed = 2;
 jumpSpeed =10;
 jumping = false;
+lockPos = 0;
 
 }
 
@@ -112,6 +114,7 @@ y = transform.position.y;
 //Debug.Log("green = " +g); 
 gameObject.rigidbody.useGravity = true;
 rigidbody.angularVelocity = Vector3(0,0,0);
+transform.rotation = Quaternion.Euler(lockPos, lockPos,lockPos);
 }
 
 

@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Platform1.js" />
      <Compile Include="Assets\color.js" />
+     <Compile Include="Assets\platform2.js" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
