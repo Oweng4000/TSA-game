@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Platform1.js" />
+     <Compile Include="Assets\colochangecube2.js" />
      <Compile Include="Assets\color.js" />
+     <Compile Include="Assets\colorchangeforcubes.js" />
      <Compile Include="Assets\platform2.js" />
   </ItemGroup>
   <ItemGroup>
