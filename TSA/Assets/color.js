@@ -9,6 +9,10 @@ var jumpSpeed : int;
 var jumping : boolean;
 var y : float;
 var lockPos : float;
+var i : int;
+var x : double; 
+var y2 : double;
+var z : double; 
 //var frameRate : double; 
 
 
@@ -21,10 +25,10 @@ b = 0.5;
 amount = 0.5; 
 health = 100; 
 speed = 2;
-jumpSpeed =10;
+jumpSpeed =300;
 jumping = false;
 lockPos = 0;
-
+i = 0;
 }
 
 function Update () {
@@ -41,14 +45,13 @@ transform.Translate(Vector3.left*speed*Time.deltaTime);
 //Camera.mainCamera.transform.Translate(Vector3.left*speed*Time.deltaTime);
 //Spotlight.transform.Translate(Vector3.right*Time.deltaTime);
 }
-if(Input.GetKey("space")){
+if(Input.GetKey("space")&&jumping==false){
+     jumping = true;
     gameObject.rigidbody.AddForce(Vector3.up * jumpSpeed);
-    
-    //jumping = true;
     }
     
 if(y<-10) {
-transform.position = Vector3(-4.386902e-05,-2.193451e-05,-2.193451e-05);
+transform.position = Vector3(x,y2,z);
 rigidbody.velocity = Vector3(0, 0, 0);
 //Camera.mainCamera.transform.position= Vector3(0, 0.5483226, -8.4856);
 rigidbody.rotation=Quaternion.Euler(Vector3(0,0,0));
@@ -65,6 +68,18 @@ y = transform.position.y;
 gameObject.rigidbody.useGravity = true;
 rigidbody.angularVelocity = Vector3(0,0,0);
 transform.rotation = Quaternion.Euler(lockPos, lockPos,lockPos);
+
+}
+
+function OnCollisionExit() {
+y2 = transform.position.y;
+x = transform.position.x;
+z = transform.position.z;
+ 
+
+}
+function OnCollisionEnter() {
+jumping=false;
 }
 
 
