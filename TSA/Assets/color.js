@@ -72,14 +72,17 @@ transform.rotation = Quaternion.Euler(lockPos, lockPos,lockPos);
 }
 
 function OnCollisionExit() {
-y2 = transform.position.y;
-x = transform.position.x;
-z = transform.position.z;
+//y2 = transform.position.y;
+//x = transform.position.x;
+//z = transform.position.z;
  
 
 }
 function OnCollisionEnter() {
 jumping=false;
+y2 = transform.position.y;
+x = transform.position.x;
+z = transform.position.z;
 }
 
 
