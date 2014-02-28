@@ -51,6 +51,7 @@
      <Compile Include="Assets\color.js" />
      <Compile Include="Assets\colorchangeforcubes.js" />
      <Compile Include="Assets\platform2.js" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
