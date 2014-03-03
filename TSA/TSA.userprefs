@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/color.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/platform3.js">
     <Files>
-      <File FileName="Assets/color.js" Line="77" Column="26" />
+      <File FileName="Assets/platform3.js" Line="8" Column="58" />
+      <File FileName="Assets/color.js" Line="90" Column="1" />
       <File FileName="Assets/Platform1.js" Line="1" Column="1" />
       <File FileName="Assets/platform2.js" Line="1" Column="1" />
-      <File FileName="Assets/colorchangeforcubes.js" Line="8" Column="6" />
-      <File FileName="Assets/colochangecube2.js" Line="9" Column="6" />
+      <File FileName="Assets/colorchangeforcubes.js" Line="1" Column="1" />
+      <File FileName="Assets/colochangecube2.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
