@@ -3,6 +3,15 @@ static var  r : float;
 static var  g : float;
 static var  b :  float;
 var amount: float; 
+var text : GUIText; 
+var brosef : GUIText;
+var Textenabled : boolean;
+var reading : boolean;
+var f : int;
+var hint : GUIText;
+var p : int;
+var clashing : boolean;
+
 
 function Start () {
 r = 1; 
@@ -10,14 +19,33 @@ g = 0.92;
 b = 0.016; 
 amount = 0.5;
 gameObject.renderer.material.SetColor("_Color",Color(r,g,b));
+text.text = "Good Job! You got green!";
+Textenabled = false;
+text.fontSize = 25;
+reading = false;
+f=0;
+hint.text = "Hint: look at the last puzzle";
+hint.enabled = false;
+hint.fontSize = 25;
+p = 0;
+clashing = true;
 }
-
+function OnCollisionExit() {
+Textenabled = false; 
+}
 function Update () {
-
+brosef.enabled = Textenabled;
+text.enabled = Textenabled;
+if((Input.GetKeyDown(KeyCode.LeftShift)&&reading==true)||(Input.GetKeyDown(KeyCode.RightShift)&&reading==true)) {
+f+=1;
+}
 
 }
 function OnCollisionStay() {
-Debug.Log("Helllo");
+if(f==1) {
+reading = false; 
+Textenabled = false;
+}
 if(Input.GetKey('q')&&r<1.0) {
  r+=amount*Time.deltaTime;
 }
@@ -69,5 +97,20 @@ r=0.5;
 g=0.5;
 b=0.5;
 }
+if(Input.GetKey("h")) {
+hint.enabled = true;
+}
+if(r<=0.1 && g>=0.5 && b<=0.1&&f==0) {
+Textenabled = true;
+hint.enabled = false;
+reading = true;
+}
+if(r<=0.1 && g>=0.5 && b<=0.1 && p==0) {
+color.score+=100;
+p+=1;
+clashing = false;
+}
+if(clashing == true) {
 gameObject.renderer.material.SetColor("_Color",Color(r,g,b));
+}
 }

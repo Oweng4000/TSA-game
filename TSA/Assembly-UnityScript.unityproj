@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Message.js" />
      <Compile Include="Assets\Platform1.js" />
      <Compile Include="Assets\colochangecube2.js" />
      <Compile Include="Assets\color.js" />
      <Compile Include="Assets\colorchangeforcube3.js" />
      <Compile Include="Assets\colorchangeforcubes.js" />
+     <Compile Include="Assets\invisablewall.js" />
+     <Compile Include="Assets\invisblewall2.js" />
      <Compile Include="Assets\platform2.js" />
      <Compile Include="Assets\platform3.js" />
      <Compile Include="Assets\signpost.js" />
